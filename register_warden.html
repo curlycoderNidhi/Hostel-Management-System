@@ -1,0 +1,54 @@
+<!-- register_warden.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Warden Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Warden Registration</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="register_student.html">Student Registration</a></li>
+                    <li><a href="register_admin.html">Admin Registration</a></li>
+                    <li><a href="register_warden.html">Warden Registration</a></li>
+                    <li><a href="allocate_room.html">Room Allocation</a></li>
+                    <li><a href="fee_details.html">Fee Details</a></li> <!-- New -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container fade-in">
+        <form action="register_warden.php" method="POST" class="card">
+            <h2>Register as a Warden</h2>
+            
+            <label for="warden_id">Warden ID:</label>
+            <input type="text" name="warden_id" id="warden_id" required placeholder="Enter Warden ID">
+
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required placeholder="Enter Full Name">
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required placeholder="Enter Email Address">
+
+            <label for="department">Department:</label>
+            <select name="department" id="department" required>
+                <option value="" disabled selected>Select Department</option>
+                <option value="Maintenance">Maintenance</option>
+                <option value="Security">Security</option>
+                <option value="Food Services">Food Services</option>
+                <option value="Administration">Administration</option>
+            </select>
+
+            <button type="submit" class="btn-primary">Register</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Hostel Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

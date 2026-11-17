@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mess Type Selection</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('mess.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            max-width: 700px;
+            margin: 100px auto;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffc107;
+        }
+
+        label {
+            font-size: 18px;
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: #fff;
+            color: #333;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: #ffc107;
+            color: #000;
+        }
+
+        #menu-box {
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                margin: 30px 20px;
+            }
+
+            table, th, td {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🍽️ Mess Menu Selection</h2>
+
+        <form id="messForm">
+            <label for="student_id">Enter Student ID:</label>
+            <input type="text" id="student_id" name="student_id" required placeholder="e.g. STU1234" />
+
+            <label for="mess_type">Choose Mess Type:</label>
+            <select name="mess_type" id="mess_type" required>
+                <option value="">-- Select --</option>
+                <option value="Veg">Veg</option>
+                <option value="Non-Veg">Non-Veg</option>
+            </select>
+        </form>
+
+        <div id="menu-box" style="display:none;"></div>
+    </div>
+
+    <script>
+        function fetchMenu(messType, studentId) {
+            if (!messType || !studentId) {
+                document.getElementById("menu-box").style.display = "none";
+                return;
+            }
+
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "get_menu.php?mess_type=" + encodeURIComponent(messType) + "&student_id=" + encodeURIComponent(studentId), true);
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    document.getElementById("menu-box").innerHTML = xhr.responseText;
+                    document.getElementById("menu-box").style.display = "block";
+                }
+            };
+            xhr.send();
+        }
+
+        document.getElementById("mess_type").addEventListener("change", function () {
+            const studentId = document.getElementById("student_id").value.trim();
+            const messType = this.value;
+            if (!studentId) {
+                alert("Please enter Student ID first.");
+                this.value = ""; // Reset selection
+                return;
+            }
+            fetchMenu(messType, studentId);
+        });
+    </script>
+</body>
+</html>

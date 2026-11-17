@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fee Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        select, input {
+            padding: 10px;
+            margin: 8px 0;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label {
+            font-weight: bold;
+        }
+        .highlight {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 10px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #3498db;
+        }
+        .btn-primary {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .card {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 10px;
+            background: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>Fee Management</h1>
+        <nav>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="register_student.html">Student Registration</a></li>
+                <li><a href="register_admin.html">Admin Registration</a></li>
+                <li><a href="register_warden.html">Warden Registration</a></li>
+                <li><a href="allocate_room.html">Room Allocation</a></li>
+                <li><a href="fee_details.html">Fee Details</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container fade-in">
+    <!-- Fee Registration Form -->
+    <form action="fee_details.php" method="POST" class="card">
+        <h2>Register Fee Payment</h2>
+
+        <label for="student_id">Student ID:</label>
+        <input type="text" name="student_id" id="student_id" required placeholder="Enter Student ID">
+
+        <label for="branch">Branch:</label>
+        <select name="branch" id="branch" required>
+            <option value="">Select Branch</option>
+            <option value="Engineering">Engineering</option>
+            <option value="MCA">MCA</option>
+            <option value="M.Tech">M.Tech</option>
+        </select>
+
+        <div id="subBranchContainer" style="display:none;">
+            <label for="sub_branch">Sub Branch (Only for B.Tech / M.Tech):</label>
+            <select name="sub_branch">
+                <option value="">--Select Sub Branch--</option>
+                <option>IT</option>
+                <option>MECH</option>
+                <option>CO</option>
+                <option>IC</option>
+                <option>TEXTILE</option>
+                <option>EC</option>
+                <option>ELECTRICAL</option>
+                <option>AIDS</option>
+            </select>
+        </div>
+
+        <label for="term">Academic Term:</label>
+        <select name="term" id="term" required onchange="updateSemesters()">
+            <option value="">Select Term</option>
+            <option value="Winter">Winter</option>
+            <option value="Summer">Summer</option>
+        </select>
+
+        <label for="semester">Semester:</label>
+        <select name="semester" id="semester" required onchange="updateAmount()">
+            <option value="">Select Semester</option>
+        </select>
+
+        <label for="amount">Amount (in Rs.):</label>
+        <select name="amount" id="amount" required>
+            <option value="">Select Amount</option>
+        </select>
+
+        <label for="payment_date">Payment Date:</label>
+        <input type="date" name="payment_date" id="payment_date" required>
+
+        <label for="status">Payment Status:</label>
+        <select name="status" id="status" required>
+            <option value="" disabled selected>Select Status</option>
+            <option value="Paid">Paid</option>
+            <option value="Pending">Pending</option>
+            <option value="Late">Late</option>
+        </select>
+
+        <button type="submit" class="btn-primary">Submit Payment</button>
+    </form>
+
+    <!-- Display Fee Table -->
+    <section class="mt-20 highlight">
+        <h2>Registered Fee Payments</h2>
+        <?php include 'fees.php'; ?>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Hostel Management System. All rights reserved.</p>
+</footer>
+
+<script>
+    const feeData = {
+        "Summer": {
+            "2": "61850",
+            "4": "61850",
+            "6": "59000",
+            "8": "59000"
+        },
+        "Winter": {
+            "3": "64100",
+            "5": "64100",
+            "7": "61250"
+        }
+    };
+
+    function updateSemesters() {
+        const term = document.getElementById("term").value;
+        const semesterSelect = document.getElementById("semester");
+        const amountSelect = document.getElementById("amount");
+
+        semesterSelect.innerHTML = '<option value="">Select Semester</option>';
+        amountSelect.innerHTML = '<option value="">Select Amount</option>';
+
+        if (term && feeData[term]) {
+            Object.keys(feeData[term]).forEach(sem => {
+                semesterSelect.innerHTML += `<option value="${sem}">${sem}</option>`;
+            });
+        }
+    }
+
+    function updateAmount() {
+        const term = document.getElementById("term").value;
+        const sem = document.getElementById("semester").value;
+        const amountSelect = document.getElementById("amount");
+
+        amountSelect.innerHTML = '<option value="">Select Amount</option>';
+
+        if (term && sem && feeData[term] && feeData[term][sem]) {
+            const amount = feeData[term][sem];
+            amountSelect.innerHTML += `<option value="${amount}">Rs. ${amount}</option>`;
+        }
+    }
+
+    document.getElementById("branch").addEventListener("change", function () {
+        const branch = this.value;
+        const subBranchContainer = document.getElementById("subBranchContainer");
+        subBranchContainer.style.display = (branch === "Engineering" || branch === "M.Tech") ? "block" : "none";
+    });
+</script>
+
+</body>
+</html>
+    

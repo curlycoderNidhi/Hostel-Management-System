@@ -1,0 +1,521 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    color: #16ccd8;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #030f28;
+    color: #b87f0c;
+    padding: 20px 0;
+    border-bottom: 5px solid #cd3106;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #dfe4e9;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: #f6f8fa;
+    color: #560db7;
+}
+
+/* Main Content Styles */
+main {
+    background-color: #17d8d2;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(6, 198, 9, 0.1);
+}
+
+main h2 {
+    margin-bottom: 20px;
+    color: #917bc6;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    color: #ca1591;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #106ecc;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #0c5687;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form select:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+form button {
+    padding: 12px 20px;
+    background-color: #2980b9;
+    color: #14a3c4;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+form button:hover {
+    background-color: #828eb6;
+    transform: translateY(-2px);
+}
+
+form button:active {
+    background-color: #ecf1f5;
+    transform: translateY(0);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table thead {
+    background-color: #2980b9;
+    color: #fff;
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #01141c;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"],
+    form select {
+        font-size: 0.9em;
+    }
+
+    form button {
+        font-size: 1em;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+    }
+
+    table tr {
+        margin-bottom: 15px;
+    }
+
+    table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+/* Additional Enhancements */
+
+/* Button Variations */
+.btn-primary {
+    background-color: #2980b9;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #070707;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+}
+
+/* Alert Messages */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.alert-success {
+    background-color: #0b89dd;
+    color: #fff;
+}
+
+.alert-error {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Card Component */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Icon Styles */
+.icon {
+    margin-right: 8px;
+    color: #2980b9;
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.breadcrumb li::after {
+    content: ">";
+    margin-left: 5px;
+    color: #7f8c8d;
+}
+
+.breadcrumb li:last-child::after {
+    content: "";
+}
+
+.breadcrumb a {
+    color: #02101a;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.75em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.bg-light {
+    background-color: #ecf0f1;
+}
+
+.rounded {
+    border-radius: 4px;
+}
+
+
+
+
+/* Existing Styles... */
+
+/* Body Background Image */
+body {
+    background-image: url('scet1.jpg'); /* Adjust path as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #2be4e1; /* Ensure text is readable against background */
+}
+
+/* Overlay for Header, Main, and Footer */
+header, footer, main {
+    background-color: rgba(21, 23, 21, 0.8); /* Semi-transparent background */
+    border-radius: 8px;
+    padding: 100px;
+    margin: 100px;
+}
+
+/* Text Colors for Contrast */
+h1, h2, h3, p, li, a {
+    color: #127892;
+}
+
+/* Table Styles Adjusted for Dark Background */
+table {
+    background-color: rgba(236, 240, 241, 0.9);
+    color: #0db3e1;
+}
+
+table thead {
+    background-color: #e8b418;
+    color: #fff;
+}
+
+/* Alert Styles for Dark Background */
+.alert-success {
+    background-color: #03150a;
+    color: #fff;
+}
+
+.alert-error {
+    background-color: #c0392b;
+    color: #fff;
+}
+
+/* Adjusting Banner and Hero Sections for Dark Background */
+.banner img {
+    border-radius: 0 0 8px 8px;
+    object-fit: cover;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    background-image: url('scet1.jpg'); /* Ensure this image exists */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 14, 13, 0.6); /* Dark overlay */
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn-primary {
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+/* Responsive Adjustments for Background */
+@media (max-width: 768px) {
+    .hero {
+        height: 200px; /* Adjust as needed */
+    }
+}
+
+/* Existing Styles... */
+
+/* Feature Icons Styles */
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.feature-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Specific Wi-Fi Icon Size */
+
+
+/* Other Specific Icons (Optional) */
+.support-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.security-icon {
+    width: 1000px;
+    height: 1000px;
+}
+

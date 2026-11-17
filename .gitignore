@@ -1,0 +1,25 @@
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Environment and secret files
+.env
+.env.*
+!.env.example
+
+# Temporary and cache files
+cache/
+tmp/
+
+# Private uploaded data
+# Review uploads before committing.

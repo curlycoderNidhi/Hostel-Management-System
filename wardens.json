@@ -1,0 +1,14 @@
+[
+    {
+        "warden_id": "1",
+        "name": "abc",
+        "email": "abc@gmail.com",
+        "department": "Administration"
+    },
+    {
+        "warden_id": "2",
+        "name": "abc",
+        "email": "abc@gmail.com",
+        "department": "Administration"
+    }
+]

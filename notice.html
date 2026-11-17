@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Notice Board</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            padding: 20px;
+        }
+        .notice-board {
+            width: 70%;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #003366;
+        }
+        .notice {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e0f7fa;
+            border-left: 5px solid #00796b;
+        }
+        .notice h2 {
+            color: #00796b;
+            margin-bottom: 10px;
+        }
+        .time-display {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+            background-color: #f9fbe7;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #cddc39;
+            color: #827717;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="notice-board">
+        <h1>Hostel Notice Board</h1>
+
+        <div class="notice">
+            <h2>Important Notice:</h2>
+            <p><strong>No Ragging Allowed:</strong> Ragging in any form is strictly prohibited in the hostel. Any student found involved in ragging will face severe disciplinary actions, including expulsion from the hostel and the institute. Let’s work together to maintain a safe and respectful environment for everyone.</p>
+        </div>
+
+        <div class="notice">
+            <h2>Curfew Timing:</h2>
+            <p>The hostel gate will be closed from <strong>10:00 PM</strong> to <strong>6:00 AM</strong>. Please ensure you are within the hostel premises during this time. Late entries will not be permitted without prior approval from the warden.</p>
+        </div>
+
+        <div class="time-display" id="current-time">
+            Current Time: <span id="time"></span>
+        </div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const timeElement = document.getElementById('time');
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateTime, 1000);
+        updateTime(); // Initial call to set time immediately
+    </script>
+
+</body>
+</html>

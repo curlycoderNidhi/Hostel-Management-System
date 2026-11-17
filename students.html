@@ -1,0 +1,60 @@
+<?php
+// students.php
+$students_file = 'data/students.json';
+if(file_exists($students_file)){
+    $students_data = file_get_contents($students_file);
+    $students = json_decode($students_data, true);
+} else {
+    $students = array();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registered Students</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Registered Students</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register_student.html">Register Student</a></li>
+                <li><a href="allocate_room.html">Allocate Room</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <?php if(!empty($students)): ?>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Course</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach($students as $student): ?>
+                        <tr>
+                            <td><?php echo htmlspecialchars($student['student_id']); ?></td>
+                            <td><?php echo htmlspecialchars($student['name']); ?></td>
+                            <td><?php echo htmlspecialchars($student['email']); ?></td>
+                            <td><?php echo htmlspecialchars($student['course']); ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        <?php else: ?>
+            <p>No students registered yet.</p>
+        <?php endif; ?>
+    </main>
+    <footer>
+        <p>&copy; 2024 Hostel Management System</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,86 @@
+[
+    {
+        "admin_id": "1",
+        "name": "admin",
+        "email": "abc@gmail.com",
+        "password": "123"
+    },
+    {
+        "admin_id": "1",
+        "name": "admin",
+        "email": "abc@gmail.com",
+        "password": "$2y$10$UDi3y2mMbIF3XRaCzJ9yPuebtyjSSncYEs48j5IYnsLWOqepKbfZm"
+    },
+    {
+        "admin_id": "1",
+        "name": "admin",
+        "email": "abc@gmail.com",
+        "password": "$2y$10$J2lYAdTm5fE0ZrWUXLMT9e4SUzoxD1Gj2LSNWcqeu93kztLs1iJN6"
+    },
+    {
+        "admin_id": "1",
+        "name": "admin",
+        "email": "abc@gmail.com",
+        "password": "$2y$10$38738k6hfINREm5hQ6UyLOYn4d.JtaTy\/4TyqfwdB1xTZj3lONORi"
+    },
+    {
+        "admin_id": "1",
+        "name": "SAKARIYA NIDHI HARISHBHAI",
+        "email": "nidhisakariya204@gmail.com",
+        "password": "$2y$10$l1i3uxbPuRp1oX5ru.AbkeQBQfrkKnMnMSYiEOx2vLXYyRrzUcfDi"
+    },
+    {
+        "admin_id": "1",
+        "name": "admin",
+        "email": "abc@gmail.com",
+        "password": "$2y$10$2QKV2GEDuxRr\/x.ch13lXufAB7LaHcb0uiIne2V6.7tAdaFAMVR3C"
+    },
+    {
+        "admin_id": "1",
+        "name": "abc",
+        "email": "abc@gmail.com",
+        "password": "$2y$10$a3IBLshXjFgEZrmiud0T4en\/YOB4L6xwWLf67ksAatis3G2lFm6cW"
+    },
+    {
+        "admin_id": "1",
+        "name": "abc",
+        "email": "abc@gmail.com",
+        "password": "$2y$10$SezOuefd5LnSJvOCUavKg.K6aO5rM2BjW2L6lZNzV69lQOWjzgSyK"
+    },
+    {
+        "admin_id": "1",
+        "name": "abc",
+        "email": "abc@gmail.com",
+        "password": "$2y$10$WyCahCS1SjFIvyexPxrLlucTmZ3int7ml8cfOSD9cVFd23IcZZDeq"
+    },
+    {
+        "admin_id": "1",
+        "name": "SAKARIYA NIDHI HARISHBHAI",
+        "email": "nidhisakariya204@gmail.com",
+        "password": "$2y$10$LNNI\/bVYnqXNDZ2ZLF6u2O2ed.5hw6sfRXEH0oV7SkhaJLhUb.z9u"
+    },
+    {
+        "admin_id": "1",
+        "name": "SAKARIYA NIDHI HARISHBHAI",
+        "email": "nidhisakariya204@gmail.com",
+        "password": "$2y$10$IKloigV2E6RyJWewqEQo\/O6W9ONgnB2hwJuf93jrSwgYbnXCuNpue"
+    },
+    {
+        "admin_id": "1",
+        "name": "SAKARIYA NIDHI HARISHBHAI",
+        "email": "nidhisakariya204@gmail.com",
+        "password": "$2y$10$QXly8QC6nsN94IgvByRGrePxOFMFeOLAjZSr6YJIK7msa8jCIfca."
+    },
+    {
+        "admin_id": "1",
+        "name": "abc",
+        "email": "nidhisakariya204@gmail.com",
+        "password": "$2y$10$gFcp1sf\/hoRi0p7cISSdhuq2FKyG4h97OEWVf1lz0hkgjT1gkeVOG"
+    },
+    {
+        "admin_id": "1",
+        "name": "nitya",
+        "email": "nidhisakariya204@gmail.com",
+        "password": "$2y$10$pgZGpfzpVd53RDOIbWxn6e714dZWXSC2zGd0mwbu9mQUQEHF7GImm"
+    }
+]

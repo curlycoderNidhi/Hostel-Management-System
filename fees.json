@@ -1,0 +1,50 @@
+[
+    {
+        "student_id": "1",
+        "amount": 64000,
+        "payment_date": "2024-10-15",
+        "status": "Paid"
+    },
+    {
+        "student_id": "1",
+        "amount": 64000,
+        "payment_date": "2024-10-15",
+        "status": "Paid"
+    },
+    {
+        "student_id": "1",
+        "amount": 1500,
+        "payment_date": "2024-10-15",
+        "status": "Paid"
+    },
+    {
+        "student_id": "1",
+        "amount": 5000,
+        "payment_date": "2024-10-16",
+        "status": "Paid"
+    },
+    {
+        "student_id": "1",
+        "amount": 5000,
+        "payment_date": "2024-10-16",
+        "status": "Paid"
+    },
+    {
+        "student_id": "ET23BTIT808",
+        "amount": 5000,
+        "payment_date": "2024-10-18",
+        "status": "Paid"
+    },
+    {
+        "student_id": "808",
+        "amount": 5000,
+        "payment_date": "2024-10-18",
+        "status": "Paid"
+    },
+    {
+        "student_id": "ET23BTIT808",
+        "amount": 5000,
+        "payment_date": "2024-10-18",
+        "status": "Paid"
+    }
+]

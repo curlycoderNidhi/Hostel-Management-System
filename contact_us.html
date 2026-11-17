@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2e7d32;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .contact-info {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #2e7d32;
+            font-size: 2em;
+        }
+
+        .contact-details {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .contact-details p {
+            margin: 10px 0;
+        }
+
+        .contact-details strong {
+            color: #2e7d32;
+        }
+
+        /* Contact form styling */
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        form button {
+            background-color: #2e7d32;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        form button:hover {
+            background-color: #1b5e20;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2e7d32;
+            color: white;
+            margin-top: 30px;
+        }
+        .logo {
+            width: 50px; /* Set the size of the logo */
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Contact Us</h1>
+        <img src="logo.png" alt="Contact Logo" class="logo"> <!-- Replace with your logo path -->
+    </header>
+
+    <div class="container">
+        <!-- Contact Information Section -->
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <div class="contact-details">
+                <p><strong>Mobile Number:</strong>  For any inquiry:  +91-0261-2240146/47/48     
+                </p>
+                <p><strong>Email:</strong>  info@scet.ac.in</p>
+                <p><strong>Address:</strong> Sheth R.V.K.K.P.  Opp, Umra Police chowki, Athwalines, Surat</p>
+            </div>
+        </div>
+
+        <style>
+            h2 {
+                font-size: 2.5em; /* Adjust the size as per your needs */
+            }
+        </style>
+        
+        <form action="contact_us.php" method="POST">
+            <h2>Send us a message</h2>
+        
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="6" placeholder="Enter your message" required></textarea>
+        
+            <button type="submit">Submit</button>
+        </form>
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Hostel Management System. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

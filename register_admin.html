@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Admin Registration</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="register_student.html">Student Registration</a></li>
+                    <li><a href="allocate_room.html">Room Allocation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container fade-in">
+        <form action="register_admin.php" method="POST" class="card">
+            <h2>Register as an Admin</h2>
+            
+            <label for="admin_id">Admin ID:</label>
+            <input type="text" name="admin_id" id="admin_id" required>
+
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+
+            <button type="submit" class="btn-primary">Register</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Hostel Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

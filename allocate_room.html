@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Room Allocation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Room Allocation</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="register_student.html">Student Registration</a></li>
+                    <li><a href="register_admin.html">Admin Registration</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container fade-in">
+        <form action="allocate_room.php" method="POST" class="card">
+            <h2>Allocate Room to Student</h2>
+            
+            <label for="student_id">Student ID:</label>
+            <input type="text" name="student_id" id="student_id" required>
+
+            <label for="room_number">Room Number:</label>
+            <input type="text" name="room_number" id="room_number" required>
+
+            <button type="submit" class="btn-primary">Allocate Room</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Hostel Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

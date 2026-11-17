@@ -1,0 +1,74 @@
+[
+    {
+        "student_id": "1",
+        "name": "abc",
+        "email": "abc@gmail.com",
+        "course": "se"
+    },
+    {
+        "student_id": "1",
+        "name": "abc",
+        "email": "a@gmail.com",
+        "course": "se"
+    },
+    {
+        "student_id": "123",
+        "name": "abc",
+        "email": "abc@gmail.com",
+        "course": "DMBI"
+    },
+    {
+        "student_id": "808",
+        "name": "SAKARIYA NIDHI HARISHBHAI",
+        "email": "nidhisakariya204@gmail.com",
+        "course": "SE"
+    },
+    {
+        "student_id": "8",
+        "name": "nitya",
+        "email": "nitya@gmail.com",
+        "course": "SE"
+    },
+    {
+        "student_id": "ET23BTIT808",
+        "name": "SAKARIYA NIDHI HARISHBHAI",
+        "email": "nidhisakariya204@gmail.com",
+        "course": "SE"
+    },
+    {
+        "student_id": "2",
+        "name": "xyz",
+        "email": "xyz@gmail.com",
+        "course": "SE"
+    },
+    {
+        "student_id": "23",
+        "name": "Ashish",
+        "email": "ashish@gmail.com",
+        "course": "SE"
+    },
+    {
+        "student_id": "809",
+        "name": "AASTHA",
+        "email": "AASTHA@GMAIL.COM",
+        "course": "SE"
+    },
+    {
+        "student_id": "3",
+        "name": "abc",
+        "email": "aastha@gmail.com",
+        "course": "SE"
+    },
+    {
+        "student_id": "78",
+        "name": "JENIFER",
+        "email": "JENIFER@GMAIL.COM",
+        "course": "SE"
+    },
+    {
+        "student_id": "ET22BTIT111",
+        "name": "JOHN LIBER",
+        "email": "JOHNA123@GMAIL.COM",
+        "course": "DMBI"
+    }
+]
